@@ -1,0 +1,6 @@
+{
+  "name": "api-auth-jwt-cognito-user-pool",
+  "stage": "dev",
+  "region": "us-east-1",
+  "lint": true
+}

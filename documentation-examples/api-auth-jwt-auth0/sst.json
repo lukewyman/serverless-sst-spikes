@@ -1,0 +1,7 @@
+{
+  "name": "api-auth-jwt-auth0",
+  "stage": "dev",
+  "region": "us-west-2",
+  "lint": true,
+  "typeCheck": true
+}
