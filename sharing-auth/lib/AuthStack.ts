@@ -1,5 +1,3 @@
-import * as cdk from '@aws-cdk/core';
-import * as cognito from '@aws-cdk/aws-cognito';
 import * as sst from '@serverless-stack/resources';
 import { Api, Auth } from '@serverless-stack/resources';
 
@@ -7,7 +5,7 @@ export default class AuthStack extends sst.Stack {
   
   private _auth: sst.Auth;
 
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: sst.App, id: string, props?: sst.StackProps) {
     super(scope, id, props);
 
     const auth = new Auth(this, 'Auth', {
@@ -24,7 +22,7 @@ export default class AuthStack extends sst.Stack {
       UserPoolId: auth.cognitoUserPool!.userPoolId,
       IdentityPoolId: auth.cognitoCfnIdentityPool.ref,
       UserPoolClientId: auth.cognitoUserPoolClient!.userPoolClientId,
-    })
+    });
   }
 
   public get auth() {

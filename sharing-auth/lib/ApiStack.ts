@@ -1,8 +1,7 @@
-import * as cdk from '@aws-cdk/core';
 import * as sst from '@serverless-stack/resources';
 
 export default class ApiStack extends sst.Stack {
-  constructor(scope: cdk.Construct, id: string, auth: sst.Auth, props?: cdk.StackProps) {
+  constructor(scope: sst.App, id: string, auth: sst.Auth, props?: sst.StackProps) {
     super(scope, id, props);
 
     const api = new sst.Api(this, 'Api', {
