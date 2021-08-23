@@ -1,0 +1,6 @@
+{
+  "name": "py-lambda-dynamodb",
+  "stage": "dev",
+  "region": "us-east-1",
+  "lint": true
+}

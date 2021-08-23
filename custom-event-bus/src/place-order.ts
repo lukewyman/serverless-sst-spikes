@@ -30,7 +30,7 @@ export const handler: Handler =
     const result = await eventbridge.putEvents(params, (err, data) => {
       if (err) console.log(err, err.stack);
       else console.log(data);
-    }).promise()
+    }).promise();
 
     return {
       statusCode: 201,
