@@ -8,9 +8,9 @@ def handler(event, context):
     response = {}
     response['headers'] = {}
     response['headers']['Content-Type'] = 'application/json'
+    
     try:
         customer = get_customer(customer_id)
-        print(f'Customer not found: {customer}')
         if customer is None:
             response['statusCode'] = 404
             response['body'] = json.dumps(f'Customer with id {customer_id} not found')

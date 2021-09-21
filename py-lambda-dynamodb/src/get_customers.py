@@ -9,9 +9,10 @@ def handler(event, context):
 
     try:
         response['body'] = json.dumps(get_customers())
-        response['statusCode'] = 200
     except Exception as e:
         response['statusCode'] = 500
         response['body'] = str(e)
+    else:
+        response['statusCode'] = 200
 
     return response

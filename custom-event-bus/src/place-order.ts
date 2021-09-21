@@ -19,7 +19,7 @@ export const handler: Handler =
       {
         Detail: JSON.stringify(order),
         DetailType: 'OrderPlaced',
-        Source: 'custom-event-bus.orders',
+        Source: 'py-custom-event-bus.orders',
         EventBusName: process.env.CUSTOM_BUS,
       }
     ]

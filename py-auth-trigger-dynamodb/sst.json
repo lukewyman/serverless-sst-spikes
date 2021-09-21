@@ -1,0 +1,6 @@
+{
+  "name": "py-auth-trigger-dynamodb",
+  "stage": "dev",
+  "region": "us-west-2",
+  "lint": true
+}

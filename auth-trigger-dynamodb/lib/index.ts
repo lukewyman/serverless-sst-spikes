@@ -9,5 +9,4 @@ export default function main(app: sst.App): void {
 
   new CognitoDynamoDBStack(app, "post-confirm");
 
-  // Add more stacks
 }
